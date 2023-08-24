@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<HTML>
+	<head>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" type = "text/css" href = "./CSSs/estilo.css">
+		<script type = "text/javascript" src = "./JSs/comportamento.js"></script>
+		<title> Formulario </title>
+	</head>
+	<body>
+	<section id = "linhavazia" name = "linhavazia" class = " "></section>
+	<div class = "cinza">
+	<section id = "linhacompleta" name = "linhacompleta">
+		<p>
+			<form>
+				<input type = "text" id = "txtnome" name = "txtnome" placeholder = "Nome: "/>
+				<input type = "number" id = "txttel" name = "txttel" placeholder = "Telefone: (xx) xxxx-xxxx"/>
+			</form>
+			<section class = "botoes">
+				<a onclick = "adclinha(txtnome.value, txttel.value); txtnome.value=''; txttel.value = '';"><img class = "botao" src = "./Imagens/confirmar.png" alt = "Não foi possível exibir a imagem" title = "Salvar número"/></a>
+			</section>
+		</p>
+		<br>
+	</section>
+	</div>
+	</body>
+</html>
