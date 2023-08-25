@@ -1,17 +1,6 @@
-function EditarContato(li) {
-    var nomeElement = li.querySelector(".nome");
-    var telefoneElement = li.querySelector(".telefone");
-
-    var nomeAntigo = nomeElement.textContent.replace("Nome: ", "");
-    var telefoneAntigo = telefoneElement.textContent.replace("Telefone: ", "");
-
-    var novoNome = prompt("Novo Nome:", nomeAntigo);
-    var novoTelefone = prompt("Novo Telefone:", telefoneAntigo);
-
-    if (novoNome !== null && novoTelefone !== null) {
-        nomeElement.textContent = `Nome: ${novoNome} `;
-        telefoneElement.textContent = ` Telefone: ${novoTelefone}`;
-    }
+function ExcluirContato(li) {
+    // Remove o contato (o pai do botão "Excluir")
+    li.remove();
 }
 
 function CriarContato() {
@@ -25,31 +14,39 @@ function CriarContato() {
     }
 
     // Crie um elemento de lista <li> para o contato
-    var contato = document.createElement("li");
-    var editarBotao = document.createElement("button");
+    const contato = document.createElement("li");
+    const editarBotao = document.createElement("button");
+    const excluirBotao = document.createElement("button");
 
-    var nomeElement = document.createElement("span");
+    const nomeElement = document.createElement("span");
     nomeElement.className = "nome";
-    nomeElement.textContent = `Nome: ${Nome} `;
+    nomeElement.textContent = `Nome: ${Nome}`;
 
-    var telefoneElement = document.createElement("span");
+    const telefoneElement = document.createElement("span");
     telefoneElement.className = "telefone";
-    telefoneElement.textContent = ` Telefone: ${Telefone}`;
+    telefoneElement.textContent = `Telefone: ${Telefone}`;
 
     editarBotao.textContent = "Editar";
+    excluirBotao.textContent = "Excluir";
 
     // Adicione o botão de edição ao contato
     editarBotao.addEventListener("click", function () {
         EditarContato(contato);
     });
 
+    // Adicione o botão de exclusão ao contato
+    excluirBotao.addEventListener("click", function () {
+        ExcluirContato(contato);
+    });
+
     // Adicione elementos ao contato
     contato.appendChild(nomeElement);
     contato.appendChild(telefoneElement);
     contato.appendChild(editarBotao);
+    contato.appendChild(excluirBotao);
 
     // Encontre a lista de contatos (você precisa ter uma lista na sua página)
-    var listaContatos = document.getElementById("lista-contatos");
+    const listaContatos = document.getElementById("lista-contatos");
 
     // Adicione o elemento de contato à lista de contatos
     listaContatos.appendChild(contato);
@@ -58,6 +55,7 @@ function CriarContato() {
     document.getElementById("txtnome").value = "";
     document.getElementById("txttel").value = "";
 }
+
 
 
 

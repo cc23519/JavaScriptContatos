@@ -1,27 +1,27 @@
 <!DOCTYPE HTML>
-<HTML>
-	<head>
-		<meta charset = "utf-8">
-		<link rel = "stylesheet" type = "text/css" href = "./CSSs/estilo.css">
-		<script type = "text/javascript" src = "./JSs/comportamento.js"></script>
-		<title> Formulario </title>
-	</head>
-	<body>
-	<section id = "linhavazia" name = "linhavazia" class = " "></section>
-	<div class = "cinza">
-	<section id = "linhacompleta" name = "linhacompleta">
-		<p>
-			<form>
-				<input type = "text" id = "txtnome" name = "txtnome" placeholder = "Nome: " maxlength="30"/>
-				<input type = "text" id = "txttel" name = "txttel" placeholder = "Telefone: (xx) xxxx-xxxx" maxlength="11" type="tel"/>
-			</form>
-			<section class = "botoes">
-				<a onclick = "CriarContato()"><img class = "botao" src = "./Imagens/confirmar.png" alt = "Não foi possível exibir a imagem" title = "Salvar número" /></a>
-			</section>
-			<ul id="lista-contatos"></ul>
-		</p>
-		<br>
-	</section>
-	</div>
-	</body>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./CSSs/estilo.css">
+    <script type="text/javascript" src="./JSs/comportamento.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <section id="linhavazia" name="linhavazia" class=""></section>
+    <div class="cinza">
+        <section id="linhacompleta" name="linhacompleta">
+            <p>
+                <form>
+                    <input type="text" id="txtnome" name="txtnome" placeholder="Nome:" maxlength="30" />
+                    <input type="text" id="txttel" name="txttel" placeholder="Telefone: (xx) xxxx-xxxx" maxlength="11" type="tel" />
+                </form>
+                <section class="botoes">
+                    <a onclick="CriarContato()"><img class="botao" src="./Imagens/confirmar.png" alt="Não foi possível exibir a imagem" title="Salvar número" /></a>
+                </section>
+                <ul id="lista-contatos"></ul>
+            </p>
+            <br>
+        </section>
+    </div>
+</body>
 </html>
